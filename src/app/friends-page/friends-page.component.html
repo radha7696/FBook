@@ -1,0 +1,48 @@
+<html>
+    <form #network="ngForm">
+<table  class="table table-bordered" id="table1">
+        <tr>
+            <th>
+               <p> FBOOK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:4200/home" style="color: blue;" [routerLink]="['home']" (click)="onHomeClick()">Home</a>&nbsp;<a href="http://localhost:4200/network" style="color: blue;" [routerLink]="['network']" (click)="onNetworkClick()">Network</a>&nbsp;<a href="http://localhost:4200/friends" style="color: blue;" [routerLink]="['friends']" (click)="onFriendsClick()">Friends</a>&nbsp;<a href="http://localhost:4200/setting" style="color: blue;">Setting</a>&nbsp;<a href="http://localhost:4200/logout" style="color: blue;" [routerLink]="['register']" (click)="onLogoutClick()">Logout</a>&nbsp;</p>
+                
+                              
+            </th>
+        </tr>
+        <tr>
+            <table>
+                <tbody>
+                <tr>
+                <th style="text-align: center;">
+                    <img type="image" src="../../assets/picture.jpg" style="width: 200px; height: 200px;" placeholder="  Profile Picture" required ngModel>
+                </th>
+                
+                @if(friends){
+                @for(i of friends; track $index){
+                  <tr>
+                <img [src]="imageToShow" style="width: 100px; height:100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.firstName}}  {{i.lastName}}
+              </tr>}}
+              @else{
+                <p style="margin-left: 100px;margin-right: auto;margin-top: 100px; font-style: italic; text-align: center;">{{error}}</p>
+              }
+                     
+              
+                
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    Connections
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    Posts
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            
+    
+</table>
+</form>
+</html>
+

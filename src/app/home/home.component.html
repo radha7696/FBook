@@ -1,0 +1,65 @@
+<html >
+    <form #home="ngForm">
+<table  class="table table-bordered" id="table1">
+        <tr>
+            <th>
+               <p> FBOOK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:4200/home" style="color: blue;" [routerLink]="['home']" (click)="onHomeClick()">Home</a>&nbsp;<a href="http://localhost:4200/network" style="color: blue;" [routerLink]="['network']" (click)="onNetworkClick()">Network</a>&nbsp;<a href="http://localhost:4200/friends" style="color: blue;" [routerLink]="['friends']" (click)="onFriendsClick()">Friends</a>&nbsp;<a href="http://localhost:4200/setting" style="color: blue;">Setting</a>&nbsp;<a href="http://localhost:4200/logout" style="color: blue;" [routerLink]="['register']" (click)="onLogoutClick()">Logout</a>&nbsp;</p>
+                
+                              
+            </th>
+        </tr>
+        <tr>
+            <table>
+                <tbody>
+                <tr>
+                <th style="text-align: center;">
+                    <input type="image" src="../../assets/picture.jpg" name="profilePic" style="width: 200px; height: 200px;" placeholder="  Profile Picture" required ngModel>
+                </th>
+                <th>
+                    <table id="table2">
+                        <tbody>
+                        <tr>
+                        <th style="text-align: center;">
+                            <input type="text" name="post" style="width: 535px; height: 50px;" placeholder="  Write on Feed..." required ngModel>
+                            @if(newPost){
+                                <p style="margin-right: auto; text-align: left; margin-top: 20px;">{{home.value.post}}</p>}
+                                @else{
+                                    {{error}}
+                                }
+                        </th>
+                        <th style="text-align: center;">
+                            <input type="image" name="picture" style="width: 50px; height: 50px;" placeholder="  Upload picture" required ngModel>
+                        </th>
+                        <th style="text-align: center;">
+                            <button class="btn-primary" type="submit" style="width: 50px; height: 50px;" name="Button1" value="Submit1" (click)="createPost(home, '65ffbbfd5a46b61758a42c0b', 'ronaldoj@gmail', '65ffbbfd5a46b61758a42c08', '', true, false, 'Analyst')" required ngModel>Post</button>
+                        </th>
+                    </tr>
+                    </tbody>
+                    </table>
+                </th>
+            </tr>
+        
+            <tr>
+                <td style="text-align: center;">
+                    Connections
+                </td>
+            </tr>
+                </tbody>
+            </table>
+        </tr>
+</table>
+   </form>  
+   <table>
+    <tbody class="table table-bordered"><tr style="margin-left: auto; margin-right:auto; text-align: left;">
+        <th>
+                        @for(p of existingPosts; track $index){
+                        
+                            <p style="margin-right: auto; text-align: left; margin-top: 20px;">{{p.post}}</p><button style="margin-left: auto; margin-right: auto; text-align: left;"   class="btn-primary" type="button" id= "Buttonid" name="Button2" value="Submit2" (click)="deletePost(p.id)"> Delete Post</button>
+                        
+                    }
+                </th>
+                </tr>
+    </tbody>
+                </table>
+                    </html> 
+

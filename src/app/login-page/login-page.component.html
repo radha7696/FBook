@@ -1,0 +1,39 @@
+<html >
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+<table  class="table table-bordered" >
+    
+        <tr>
+            <th scope="col" style="text-align: center;">
+               <p> FBOOK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:4200/register" style="color: blue;" (click)="registerPage()">Register</a>&nbsp;<a href="http://localhost:4200/login" style="color: black;" (click)="loginPage()">Login</a></p>
+                
+                              
+            </th>
+        </tr>
+        <tr>
+            <table>
+                <tbody>
+                <tr>
+                <th style="text-align: center;">
+                    Login
+                </th>
+            </tr>
+                <tr>
+                    <input type="email" name="email" style="width: 420px; height: 40px;" placeholder="  Username" required ngModel>
+                </tr>
+                <tr> <input type="password" name="password" style="width: 420px; height: 40px;" placeholder="  Password" required ngModel>
+                </tr>
+                <tr>
+                    <div>
+                    <button type= "button" class="btn-primary">Forgot Password</button><button class="btn-primary" style="margin-left: 230px;" type="submit">Login</button>
+                    </div>
+                
+                </tr>
+            </tbody>
+            </table>
+        </tr>
+    
+    
+</table>
+</form>
+
+</html>

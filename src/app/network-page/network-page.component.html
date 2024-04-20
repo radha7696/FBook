@@ -1,0 +1,48 @@
+<html>
+    <form #network="ngForm">
+<table  class="table table-bordered" id="table1">
+    
+        <tr>
+            <th>
+               <p> FBOOK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:4200/home" style="color: blue;" [routerLink]="['home']" (click)="onHomeClick()">Home</a>&nbsp;<a href="http://localhost:4200/network" style="color: blue;" [routerLink]="['network']" (click)="onNetworkClick()">Network</a>&nbsp;<a href="http://localhost:4200/friends" style="color: blue;" [routerLink]="['friends']" (click)="onFriendsClick()">Friends</a>&nbsp;<a href="http://localhost:4200/setting" style="color: blue;">Setting</a>&nbsp;<a href="http://localhost:4200/logout" style="color: blue;">Logout</a>&nbsp;</p>
+                
+                              
+            </th>
+        </tr>
+    </table>
+</form>
+        
+            <table>
+                <tbody>
+                <tr>
+                <th style="text-align: center;">
+                    <img type="image" src="../../assets/picture.jpg" style="width: 200px; height: 200px;" placeholder="  Profile Picture" required ngModel>
+                </th>
+            </tr>
+                
+                @for(i of users; track $index){
+                  <tr id=i.id>
+                    <!-- btn btn-outline-success my-2 my-sm-0; -->
+                <img [src]="imageToShow" style="width: 100px; height:100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.firstName}} {{i.lastName}}<button class="btn=primary" style="margin-left: auto;" type="submit" id= {i.id} (click)="sendReq('65ffbbfd5a46b61758a42c0b', i.id, 'Request Pending');">{{reqButton}}</button>
+                  
+              </tr>
+            }      
+                
+            
+            <tr>
+                <td style="text-align: center;">
+                    Connections
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    Posts
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            
+    
+    
+
+</html>

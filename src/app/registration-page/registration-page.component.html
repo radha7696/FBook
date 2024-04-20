@@ -1,0 +1,50 @@
+<html >
+    <form #registration="ngForm" (ngSubmit)="submit(registration)">
+<table  class="table table-bordered" >
+    
+        <tr>
+            <th scope="col" style="text-align: center;">
+               <p> FBOOK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:4200/register" style="color: black;" (click)="registerPage()">Register</a>&nbsp;<a href="http://localhost:4200/login" style="color: blue;" (click)="loginPage()">Login</a></p>
+                
+                              
+            </th>
+        </tr>
+        <tr>
+            <table>
+                <tbody>
+                <tr>
+                <th style="text-align: center;">
+                    Registration
+                </th>
+            </tr>
+                <tr>
+                    <input type="text" name="firstName" style="width: 360px; height: 40px;" placeholder="  First Name" required ngModel>
+                </tr>
+                <tr>
+                    <input type="text" name="lastName" style="width: 360px; height: 40px;" placeholder="  Last Name" required ngModel>
+                </tr>
+                <tr>
+                    <input type="text" name="dob" style="width: 360px; height: 40px;" placeholder="  Date of Birth(MM/DD/YYYY)" required ngModel>
+                </tr>
+                <tr>
+                    <input type="text" name="gender" style="width: 360px; height: 40px;" placeholder="  Gender(Male/Female)" required ngModel>
+                </tr>
+                <tr>
+                    <input type="email" name="email" style="width: 360px; height: 40px;" placeholder="  Email" required ngModel>
+                </tr>
+                <tr> <input type="password" name="password" style="width: 360px; height: 40px;" placeholder="  Password" required ngModel>
+                </tr>
+                <tr>
+                    <div>
+                    <button class="btn-primary" (click)="loginPage()">Login</button><button class="btn-primary" style="margin-left: 230px;" type="submit">Register</button>
+                    </div>
+                
+                </tr>
+            </tbody>
+            </table>
+        </tr>
+    
+    
+</table>
+</form>
+</html>
